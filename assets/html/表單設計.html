@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<title>NTUE Employee information</title>
+    </head>	
+    <body>
+        <h1>新人報到表單</h1>
+
+        <form>
+            <fieldset name="personal_details"> 
+                <legend>個人資料</legend>
+
+                <label for="fname">姓名：</label>
+                <input type="text" id="fname" name="fname"><br>
+                <br>
+                <label for="start">生日： </label>
+                <input type="date" id="start" name="start"><br>
+                <br>
+                
+                <form>
+                    <div>
+                        <label for="phone">行動電話號碼：</label>
+                        <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+                        <small>填寫格式: 1234-567-890</small>
+                    </div>
+                </form>   
+                <br> 
+
+                <div>
+                    <form>
+                        <label for="email" >Email：</label>
+                        <input type="email" placeholder="example@email.com">
+                    </form>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset name="professional_details"> 
+                <legend>教育程度</legend>
+
+                 <div>
+                    <label for="browser">最高學歷：</label>
+                    <select name="browser">
+                        <option value="" disabled selected>請選擇</option>
+                        <option value="chrome">博士</option>
+                        <option value="firefox">碩士</option>
+                        <option value="safari">大學</option>
+                        <option value="edge">高中</option>
+                    </select>
+                </div>
+                <br>
+                <label for="company">學校名稱：</label>
+                <input type="text" id="company" name="company"><br>
+                <br>
+                <div>
+                <label for="academic_status">畢業狀況：</label>
+                <input type="radio" id="graduated" name="academic_status" value="graduated">
+                <label for="graduated">已畢業</label>
+                <input type="radio" id="withdrawn" name="academic_status" value="withdrawn">
+                <label for="withdrawn">肄業</label>
+                
+               </div>
+            </fieldset>
+            <br>
+            <fieldset name="professional_details"> 
+                <legend>職業資訊</legend>
+
+                <div>
+                    <label for="browser">部門：</label>
+                    <select name="browser">
+                        <option value="" disabled selected>請選擇</option>
+                        <option value="chrome">經濟部</option>
+                        <option value="firefox">財政部</option>
+                        <option value="safari">大學部</option>
+                        <option value="edge">行政部</option>
+                        <option value="edge">人力資源部</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                <label for="academic_status">性別：</label>
+                <input type="radio" id="graduated" name="academic_status" value="man">
+                <label for="man">男生</label>
+                <input type="radio" id="withdrawn" name="academic_status" value="woman">
+                <label for="woman">女生</label>
+                
+               </div>
+            </fieldset>
+            <br>
+            <input type="submit" value="提交">
+        </form>
+    </body>
+</html>

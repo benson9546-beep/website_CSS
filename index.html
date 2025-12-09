@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樓守銘 的個人履歷</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* 自定義 CSS 區域 */
+        body {
+            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
+            padding-top: 70px; /* 為了不被 Navbar 擋住內容 */
+        }
+        
+        /* 導覽列樣式 */
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* 區塊通用樣式 */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #fd8d0d; /* Bootstrap Primary Color */
+        }
+
+        /* 首頁 Hero Section */
+        #home {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?office,computer');
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 作品集卡片 hover 效果 */
+        .portfolio-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* 地圖響應式容器 */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><i class="fas fa-code me-2"></i>樓守銘 Profile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">專案/作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">影音創作</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">更多資訊</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h1 class="display-3 fw-bold">你好, 我是樓守銘</h1>
+            <p class="lead">數位內容創作者 / Benson / 大學生</p>
+            <a href="#portfolio" class="btn btn-primary btn-lg mt-3">查看我的作品</a>
+        </div>
+    </section>
+
+    <section id="about" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">關於我</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4">
+                    <img src="assets/images/benson's picture .jpg" alt="Profile Picture" class="rounded-circle img-fluid border border-5 border-white shadow">
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <h3><i class="fas fa-user-circle text-primary me-2"></i>個人簡歷</h3>
+                            <p>我是一位目前就讀國立台北教育大學的二年級，個性樂觀開朗的白羊座，喜歡挑戰新事物，也喜歡嘗試新技術，並將創意轉化為實際的作品。</p>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <h3><i class="fas fa-graduation-cap text-primary me-2"></i>學歷</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent"><strong>國立台北教育大學</strong> <br> <small class="text-muted">資料科學系 (在學中)</small></li>
+                                <li class="list-group-item bg-transparent"><strong>永春高中</strong> <br> <small class="text-muted">畢業</small></li>
+                                <li class="list-group-item bg-transparent"><strong>介壽國中</strong> <br> <small class="text-muted">畢業</small></li>
+                                <li class="list-group-item bg-transparent"><strong>民生國小</strong> <br> <small class="text-muted">畢業</small></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <h3><i class="fas fa-laptop-code text-primary me-2"></i>程式能力</h3>
+                            <label>Python</label>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-success" style="width: 60%">60%</div>
+                            </div>
+                            <label>JavaScript</label>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-info" style="width: 50%">50%</div>
+                            </div>
+                            <label>C++</label>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-warning" style="width: 40%">40%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">專案與作品集</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <a href="https://docs.google.com/presentation/d/1HasrnAAbZoHu-bySNa1StQMKlVMD8an0DN4J7QCk370/edit?usp=sharing" class="text-decoration-none" target="_blank">
+                        <div class="card portfolio-card h-100 position-relative" title="點擊查看完整作品">
+                            <img src="assets/images/我的礁島想像.png" class="card-img-top" alt="我的礁島想像">
+                            <div class="card-body">
+                                <h5 class="card-title">我的礁島想像</h5>
+                                <p class="card-text">透過圖像合成與設計，展現心中理想的生態島嶼樣貌。</p>
+                                <small class="text-muted d-none hover-hint">💡 點擊查看詳細內容</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://docs.google.com/presentation/d/1FGt0_3TH3td8dxnJRppmamX4s5v6KhwbvpZ3n2f9Kf0/edit?usp=sharing" class="text-decoration-none" target="_blank">
+                        <div class="card portfolio-card h-100 position-relative" title="點擊查看完整作品">
+                            <img src="assets/images/self-created product.png" class="card-img-top" alt="AI生成新商品">
+                            <div class="card-body">
+                                <h5 class="card-title">AI 生成新商品</h5>
+                                <p class="card-text">運用 gemini 模型生成商品,並模擬IG發貼文</p>
+                                <small class="text-muted d-none hover-hint">💡 點擊查看詳細內容</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card portfolio-card h-100">
+                        <img src="assets/images/hi ntue.jpg" class="card-img-top" alt="GenType" style="height: 300px; object-fit: contain; background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h5 class="card-title">GenType 自創短語</h5>
+                            <p class="card-text">使用 Google GenType 工具創造的字母拼貼藝術。</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-4">
+                    <div class="card portfolio-card h-100 border-primary">
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <i class="fas fa-link fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">基礎網頁練習</h5>
+                            <p class="card-text">利用 html 的功能來練習做網站</p>
+                            <a href="assets/html/網頁練習.html" class="btn btn-outline-primary mt-auto" target="_blank">點擊前往網站</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card portfolio-card h-100 border-success">
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <i class="fas fa-list-alt fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">表單設計實作</h5>
+                            <p class="card-text">利用一些較進階的功能，完成表單</p>
+                            <a href="assets/html/表單設計.html" class="btn btn-outline-success mt-auto" target="_blank">點擊填寫表單</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card portfolio-card h-100 border-warning">
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <i class="fas fa-presentation fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">期中專案展示</h5>
+                            <p class="card-text">期中專案的影片設計過程思路與簡報。</p>
+                            <a href="https://www.canva.com/design/DAG3DoDc7FA/ZyXz6-8PIUDAZeP65k7C1g/edit?utm_content=DAG3DoDc7FA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-outline-warning mt-auto" target="_blank">查看簡報</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">影音創作</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h4 class="card-title mb-4"><i class="fas fa-music text-danger"></i> 音樂創作</h4>
+                            <p>利用suno AI製作的音樂作品</p>
+                            <div class="d-flex justify-content-center">
+                                <audio controls style="width: 80%;" class="mb-3">
+                                    <source src="assets/audio/資二甲_111316002_樓守銘_1013.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                           
+                            <div class="d-flex justify-content-center">
+                                <audio controls style="width: 80%;" class="mb-3">
+                                    <source src="assets/audio/未來的節奏.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h4 class="card-title mb-4"><i class="fas fa-video text-danger"></i> 影片創作</h4>
+                            <p>利用PixVerse製作的影片</p>
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="assets/video/影片生成.mp4" title="YouTube video" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">更多資訊</h2>
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <div class="card h-100 bg-dark text-white p-4">
+                        <h3 class="mb-4">聯絡方式</h3>
+                        <p class="mb-3"><i class="fas fa-envelope fa-lg me-3 text-warning"></i> <strong>Gmail:</strong> <br> benson9546_JOKER@gmail.com</p>
+                        <p class="mb-3"><i class="fas fa-phone fa-lg me-3 text-warning"></i> <strong>電話號碼:</strong> <br> 0987-087-269</p>
+                        <p class="mb-3"><i class="fas fa-map-marker-alt fa-lg me-3 text-warning"></i> <strong>學校:</strong> <br> 國立台北教育大學</p>
+                        <hr>
+                        <p>!歡迎透過以上方式與我聯繫！</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="card h-100 shadow">
+                        <div class="map-container h-100">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784024338266!2d121.54206247541927!3d25.02462437782254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1731827435609!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>       
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-location-dot text-danger me-2"></i>國立台北教育大學</h5>
+                            <p class="card-text">這是我就讀的學校，歡迎來訪！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <small>&copy; 2025 Benson's Portfolio. Thank you for visiting it!</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
